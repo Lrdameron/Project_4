@@ -1,13 +1,20 @@
-from flask import Flask
-from predict_route import predict_bp
+from flask import Flask, request, jsonify
+import pickle
+import numpy as np
 
 app = Flask(__name__)
-app.register_blueprint(predict_bp)
 
-@app.route('/')
-def home():
-    return 'MARYANN THIS IS A PLACEHOLDER FOR ACTUAL TEXT'
+# Load your trained model
+with open('model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.get_json()  # JSON should have a 'features' key
+    features = np.array(data['features']).reshape(1, -1)
+    
+    prediction = model.predict(features)
+    return jsonify({'prediction': prediction.tolist()})
 
 if __name__ == '__main__':
     app.run(debug=True)
-
