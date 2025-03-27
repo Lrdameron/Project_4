@@ -1,19 +1,18 @@
-# 🧠 Loan Approval Predictor
+# 🏦 Loan Default Prediction with Logistic Regression
 
-A machine learning project to predict whether a loan application should be approved based on financial and demographic data.
+This project predicts the likelihood of loan defaults using logistic regression. The model is deployed via a Flask API, and results are visualized in a Tableau dashboard to help stakeholders make data-driven decisions about borrower risk.
 
 ---
 
 ## 🚀 Overview
-This project simulates a simplified loan approval system using historical LendingClub data. The team built a logistic regression model, created data visualizations in Tableau, and developed a Flask web application to serve predictions.
+Our team worked collaboratively to clean and preprocess a dataset of accepted loan applications, train and optimize a logistic regression model, deploy the model with Flask, and create a visualization dashboard in Tableau. 
+
+The goal is to build a functional and interpretable pipeline for predicting loan delinquency, identifying borrowers with a higher likelihood of default.
 
 ---
 
 ## 📊 Dataset
 - **Source**: [LendingClub Loan Data on Kaggle](https://www.kaggle.com/datasets/wordsforthewise/lending-club)
-- **Records**: The original dataset contains over 1 million loan applications.  
-  _(Note: We are using a cleaned and trimmed subset for this project. Final count will be updated.)_
-- **Key Fields**: 
 
 ---
 
@@ -25,31 +24,20 @@ This project simulates a simplified loan approval system using historical Lendin
 
 ---
 
-## 💻 Running the App
-**To run locally:**
-```bash
-git clone <your-repo-url>
-cd loan-approval-predictor
-pip install -r requirements.txt
-python app.py
-```
-
-_Note: Update with final model file and form route if needed._
-
----
-
 ## 📊 Tableau Dashboard
-- _[Placeholder for Tableau Public link or embed]_
+- _https://public.tableau.com/app/profile/tyquese.taplin/viz/Project4-CreditAnalysis/Story1?publish=yes_
 - Visualizations show approval rates by income, loan purpose, and other features
 
 ---
 
 ## 🛠️ Technologies Used
-- Python (Pandas, Scikit-learn, Flask)
-- Jupyter Notebook
-- Tableau
-- HTML/CSS (for Flask UI)
-- GitHub for version control
+- **Python** (Pandas, NumPy, Scikit-learn)
+- **Jupyter Notebook**
+- **Flask** (for API deployment)
+- **Tableau** (for visualization)
+- **GitHub** (for version control and collaboration)
+- **HTML/CSS** (Flask frontend)
+- **Microsoft PowerPoint** (for final presentation)
 
 ---
 
@@ -65,17 +53,17 @@ _Note: Update with final model file and form route if needed._
 
 ---
 
-## 📁 Folder Structure _(to be updated)_
-```bash
-📦 loan-approval-predictor
- ┣ 📂 static
- ┣ 📂 templates
- ┣ 📜 app.py
- ┣ 📜 model.pkl
- ┣ 📜 notebook.ipynb
- ┣ 📜 requirements.txt
- ┣ 📜 README.md
-```
+| Task Area         | Description                                                                 | Team Member |
+|------------------|-----------------------------------------------------------------------------|-------------|
+| **Data Cleaning** | Loaded dataset, checked for missing values, removed unnecessary columns, performed feature engineering | Cordette    |
+| **Preprocessing** | Encoded categorical variables, normalized numeric features, split into train/test sets | Inshirah    |
+| **Modeling**      | Trained logistic regression model                                            | Fitsum      |
+| **Optimization**  | Evaluated and optimized model performance (Precision, Recall, F1-score)      | Isaiah      |
+| **Visualization** | Exported predictions and built Tableau dashboard for loan risk insights      | Tyquese     |
+| **Model Deployment** | Created Flask backend, loaded model, built `/predict` endpoint             | Logan       |
+| **Frontend**      | Built frontend form to collect user input and display prediction results     | Maryann     |
+| **Documentation** | README & Project Guide                                                      | Logan       |
+| **Presentation**  | Created Google Slides deck with project visuals and summary                  | Charles     |
 
 ---
 
