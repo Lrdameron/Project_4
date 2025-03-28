@@ -2,16 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction Form</title>
+    <title>Loan Default Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding-top: 40px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h2>Enter Your Features for Prediction</h2>
-    <form action="/" method="POST">
-        <input type="text" name="feature1" placeholder="Enter Feature 1" required>
-        <input type="text" name="feature2" placeholder="Enter Feature 2" required>
+    <h2>Loan Default Prediction</h2>
+    <form action="/predict" method="POST">
+        <label for="income">Annual Income:</label>
+        <input type="number" step="0.01" name="income" id="income" placeholder="e.g. 60000" required>
+
+        <label for="loan_amount">Loan Amount:</label>
+        <input type="number" step="0.01" name="loan_amount" id="loan_amount" placeholder="e.g. 15000" required>
+
+        <label for="fico_range_low">FICO Range Low:</label>
+        <input type="number" step="1" name="fico_range_low" id="fico_range_low" placeholder="e.g. 660" required>
+
+        <label for="fico_range_high">FICO Range High:</label>
+        <input type="number" step="1" name="fico_range_high" id="fico_range_high" placeholder="e.g. 700" required>
+
+        <label for="dti">Debt-to-Income Ratio (DTI):</label>
+        <input type="number" step="0.01" name="dti" id="dti" placeholder="e.g. 18.5" required>
+
         <button type="submit">Predict</button>
     </form>
 </body>
 </html>
-
