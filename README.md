@@ -19,7 +19,7 @@ The goal is to build a functional and interpretable pipeline for predicting loan
 ## 🧪 Machine Learning Approach
 - Binary classification using **Logistic Regression**
 - Preprocessing included encoding categorical variables and scaling numeric values
-- Dataset split into training and testing sets (80/20)
+- Dataset split into training and testing sets (70/30)
 - Evaluation metrics: `accuracy_score`, `confusion_matrix`, `classification_report` (includes precision, recall, F1-score)
 
 ---
